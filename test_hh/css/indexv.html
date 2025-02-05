@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Эффект нарезанного видео</title>
+    <style>
+        
+    </style>
+</head>
+<body>
+
+<div id="video-container">
+    <video id="myVideo" autoplay muted loop>
+        <source src="../img/video.mp4" type="video/mp4">
+        Ваш браузер не поддерживает видео.
+    </video>
+    <div class="abstract-text" id="abstractText">Текст абстракции</div>
+</div>
+
+<script>
+    const video = document.getElementById('myVideo');
+    const abstractText = document.getElementById('abstractText');
+
+    // Функция для отображения текста
+    function showAbstractText() {
+        abstractText.style.opacity = 1;
+        setTimeout(() => {
+            abstractText.style.opacity = 0;
+        }, 2000); // Текст будет виден 2 секунды
+    }
+
+    // Запускаем эффект каждые 5 секунд
+    setInterval(showAbstractText, 5000);
+</script>
+
+</body>
+</html>
