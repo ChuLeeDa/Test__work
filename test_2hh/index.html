@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Tz-2</title>
+</head>
+
+<body>
+
+  <svg class="svg" xmlns="http://www.w3.org/2000/svg" id="svg" viewBox="0 0 160 140">
+    <style>
+      body {
+        height: 100vh;
+        background: black;
+        transform: scale(1);
+        font-family: Arial, Helvetica, sans-serif;
+        margin: 0 auto ;
+      }
+
+
+      foreignObject {
+        aspect-ratio: 16 / 14;
+        font-size: 1rem;
+      }
+
+      video {
+        width: 100%;
+        
+      }
+
+      text {
+        font-size: 11px;
+        font-weight: bold;
+        fill: #fff;
+      }
+
+      .back {
+        fill: black;
+      }
+
+      .erectio [fill="black"] {
+        height: .5rem;
+      }
+
+      .svg-container {
+
+        resize: both;
+        overflow: auto;
+
+      }
+
+      .rect {
+        display: none;
+      }
+
+      .desctop {
+        display: none;
+      }
+
+      @media (max-width: 769px) {
+        .display-none-mob {
+          display: none;
+        }
+
+        .rect-1-mob {
+          width: 70px;
+          x: 90px;
+          y: 15px;
+        }
+
+        .rect-2-mob {
+          width: 94px;
+          y: 37px;
+          x: 21px;
+        }
+
+        .rect-3-mob {
+          width: 47px;
+          x: 3px;
+          y: 59.5px;
+        }
+
+        .rect-4-mob {
+          width: 26px;
+          y: 104.5px;
+          x: 35px;
+        }
+
+        .rect-5-mob {
+          width: 60px;
+          x: 99px;
+          y: 127px;
+        }
+      
+
+      .block {
+        display: block;
+      }
+
+      .text {
+        transform: scale(1.5);
+        -webkit-transform-origin-x: 3px;
+      }
+
+      
+      .bg_video {
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 158%;
+        transform: rotate(17deg);
+      }
+    }
+    </style>
+
+    <foreignObject x="0" y="0" width="100%" height="100%">
+      <video autoplay loop muted playsinline="" src="./img/video.mp4" type="video/mp4" class="bg_video"></video>
+    </foreignObject>
+    <mask id="myMask" class="erectio">
+      <rect x="0" y="0" width="160" height="140" fill="white" />
+      <rect class="rect-1-mob  " x="60" y="9" width="45" fill="black" />
+      <!--We're here-->
+      <rect class="rect-2-mob  " x="43" y="24" width="23" fill="black" />
+      <!--healthy-->
+      <rect class="rect-3-mob  " x="63" y="39" width="30" fill="black" />
+      <!--live longer-->
+      <rect class="rect-4-mob  block" x="70" y="54" width="85" fill="black" />
+      <!--happier-->
+      <rect class="rect-5-mob " x="68" y="54" width="87" fill="black" />
+      <!--added-->
+
+    </mask>
+    <rect class="back" id="make" x="0" y="0" width="160" height="160" mask="url(#myMask)" />
+    <text class="text" x="0" y="0">
+      <tspan x="2" y="15">We&rsquo;re here</tspan>
+      <tspan class="display-none-mob " x="109" y="15">to &nbsp;make</tspan>
+      <tspan class="display-none-mob" x="2" y="30">healthy</tspan>
+      <tspan class="display-none-mob" x="72" y="30">living effortless,</tspan>
+      <tspan class="display-none-mob" x="2" y="45">so you can</tspan>
+      <tspan class="display-none-mob" x="100" y="45">live longer</tspan>
+      <tspan class="display-none-mob" x="2" y="60">and happier</tspan>
+
+
+      <!-- мобильная версия -->
+
+      <tspan class="desctop block" x="2" y="30">to</tspan>
+      <tspan class="desctop block" x="80" y="30">make</tspan>
+
+      <tspan class="desctop block" x="38" y="45">healthy living</tspan>
+
+      <tspan class="desctop block" x="2" y="60">effortless, so you </tspan>
+      <tspan class="desctop block" x="2" y="75">can</tspan>
+      <tspan class="desctop block" x="45" y="75">live longer</tspan>
+      <tspan class="desctop block" x="2" y="90">and happier</tspan>
+
+
+
+    </text>
+
+
+
+
+
+
+
+    <script>//<![CDATA[
+      function textWidth(text) {
+        const txt = document.querySelector('svg text');
+        return txt.clientWidth;
+      }
+      let width = textWidth('');
+      console.log(width);
+
+      //]]>
+
+
+    </script>
+
+  </svg>
+
+
+
+</html>
+
+</body>
+
+</html>
